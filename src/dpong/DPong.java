@@ -28,7 +28,7 @@ public class DPong extends JFrame implements WindowListener, KeyListener {
 		this.setIgnoreRepaint(true);
 		this.setBackground(Color.BLACK);
 		m_entities = new LinkedList<Entity>();
-		this.setSize(800,600);
+		this.setSize(Setup.WIDTH,Setup.HEIGHT);
 		this.setResizable(false);
 		this.setTitle("DPong");
 		this.setVisible(true);
@@ -39,7 +39,7 @@ public class DPong extends JFrame implements WindowListener, KeyListener {
 		
 		
 		
-		m_image = this.createImage(800, 600);
+		m_image = this.createImage(Setup.WIDTH, Setup.HEIGHT);
 		m_graphics = m_image.getGraphics();
 	}
 	

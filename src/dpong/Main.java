@@ -11,7 +11,7 @@ public class Main {
 	public static long next_game_tick;
 	public static int loops;
 	public static float interpolation;
-	
+		
 	public static void main(String[] args) {
 		DPong game = new DPong();
 		

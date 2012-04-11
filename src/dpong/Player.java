@@ -20,8 +20,22 @@ public class Player extends Entity {
 	
 	public void moveY(int y) {
 		int newY = m_vector.getY() + y;
-		if (newY > 0 && newY < 600-m_height)
+		if (m_vector.getY() <= 0 + m_height/2){
+			if(newY > 0)
+				m_vector.setY(newY);
+			else m_vector.setY(0);
+			System.out.println("case0 " + newY);
+		}				
+		else if(m_vector.getY() >= Setup.HEIGHT - m_height/2){	
+			if(newY < Setup.HEIGHT - m_height/2)
+				m_vector.setY(newY);
+			else m_vector.setY(Setup.HEIGHT - m_height/2);
+			System.out.println("case600 " + newY);
+		}
+		else{
 			m_vector.setY(newY);
+			System.out.println("normalcase " + newY);
+		}		
 	}
 	
 	@Override

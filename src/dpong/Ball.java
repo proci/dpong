@@ -8,7 +8,7 @@ public class Ball extends Entity {
 	private static final int BALL_SIZE = 10;
 	
 	public Ball() {
-		m_vector = new Vector(400,300);
+		m_vector = new Vector(Setup.WIDTH, Setup.HEIGHT);
 		m_xSpeed = 30;
 		m_ySpeed = 30;
 	}
@@ -33,10 +33,10 @@ public class Ball extends Entity {
 	@Override
 	public void tick() {
 		// TODO Auto-generated method stub
-		if (m_vector.getX() > 800-BALL_SIZE || m_vector.getX() < 0 + BALL_SIZE) {
+		if (m_vector.getX() > Setup.WIDTH-BALL_SIZE || m_vector.getX() < 0 + BALL_SIZE) {
 			m_xSpeed *= -1;
 		}
-		if (m_vector.getY() > 600-BALL_SIZE || m_vector.getY() < 0 + BALL_SIZE) {
+		if (m_vector.getY() > Setup.HEIGHT-BALL_SIZE || m_vector.getY() < 0 + BALL_SIZE) {
 			m_ySpeed *= -1;
 		}
 		m_vector.setX(m_vector.getX() + m_xSpeed);
